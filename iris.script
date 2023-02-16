@@ -2,5 +2,5 @@ zn "%SYS"
 Do ##class(Security.Users).UnExpireUserPasswords("*")
 zn "USER"
 zpm "install webterminal"
-Do $system.OBJ.LoadDir("/rcc/src","ck")
+Do $system.OBJ.LoadDir("/rcc/src/","ck")
 halt
