@@ -26,9 +26,9 @@ docker-compose exec iris iris session iris
 
 From Command Prompt  
 ```` 
-USER>Do ^rcc.master
+USER>Do go^rcc.master(<slave-ip-adr>)
 start Remote Command Master
-server = localhost port = 6666
+server = 192.168.0.9 port = 6666
 Enter command [.=exit master, *** = stop slave & exit master]
 ??> :whoami
 ??> :
