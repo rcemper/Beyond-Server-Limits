@@ -1,33 +1,51 @@
-### common template
-
 ## Prerequisites
-Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
-
+Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.   
 ## Installation 
-Clone/git pull the repo into any local directory
+Clone/git pull the repo into any local directory    
 ```
-git https://github.com/rcemper/Dataset-OEX-reviews.git
+git https://github.com/rcemper/Beyond-Server-Limits.git   
 ```
-Run the IRIS container with your project: 
+Run the IRIS container with your project:   
 ```
-docker-compose up -d --build
+docker-compose up -d --build   
 ```
-## How to Test it
+## How to Test it   
+- There is a version in C++ precompiled for docker in subdirectory **/cpp/** rccslave(.cpp)  
+it is foreseen if special privigeges (?root?) are required    
+- The Python variant is not context sensitive and works in Windows and Linux  
 
-```
-docker-compose exec iris iris session iris
-```
+First start the Listener  
+````
+$>python3 <download_dir>/py/rccslave.py  
+````
+Next  
+````
+docker-compose exec iris iris session iris  
+````
+**[or use WebTerminal](http://localhost:42773/terminal)**  
 
-**[or use Online Demo](https://dataset-oex-reviews.demo.community.intersystems.com/csp/sys/%25CSP.Portal.Home.zen) :**
+From Command Prompt  
+```` 
+USER>Do ^rcc.master
+start Remote Command Master
+server = localhost port = 6666
+Enter command [.=exit master, *** = stop slave & exit master]
+??> :whoami
+??> :
+````
+and on the Slave end you see  
+the command that is executed  
+````
+<download-dir>python3 py\rccslave.py  
+==> whoami && exit
+cemper9\cemper
+````
+#### Remember:
+the command you submit is executed in a subprocess   
+It is a single shot and you have to providea all required parameters   
+my personal prefence on Windows:
+````
+??> :Start https://community.intersystems.com
+````
 
-### Example 1 
-
- ![](https://raw.githubusercontent.com/rcemper/IRIS-fast-ECP-setup/master/CodeQuality.JPG)
-
-[Demo Server SMP](https://jdate.demo.community.intersystems.com/csp/sys/UtilHome.csp)   
-[Demo Server WebTerminal](https://jdate.demo.community.intersystems.com/terminal/)    
-        
-**Code Quality**   
-<img width="85%" src="
-https://user-images.githubusercontent.com/31236645/147383045-964967ea-a7ba-4357-9012-1930c58b1806.png
-">
+[Article in Spanish](https://es.community.intersystems.com/post/rompe-los-l%C3%ADmites-del-servidor)
