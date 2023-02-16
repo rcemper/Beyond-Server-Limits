@@ -22,7 +22,7 @@ Next
 ````
 docker-compose exec iris iris session iris  
 ````
-**[or use WebTerminal](http://localhost:42773/terminal)**  
+**[or use WebTerminal](http://localhost:42773/terminal/)**  
 
 From Command Prompt  
 ```` 
