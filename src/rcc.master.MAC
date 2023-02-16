@@ -1,12 +1,12 @@
 ROUTINE rcc.master [Type=MAC]
-rccmaster ; # Remote Command Master
+rccmaster quit    ; # Remote Command Master
+go(slave="localhost")
 	set port=6666
-	set server="localhost"
 	write "start Remote Command Master",!
-		,"server = "_server_" port = ",port,!
+		,"slave = "_slave_" port = ",port,!
 	set tcp="|TCP|"_port
 		, stop=0
-	open tcp:(server:port):2
+	open tcp:(slave:port):2
 	else  write " Slave is not reachable ",!!  quit
 	write "Enter command [.=exit master, *** = stop slave & exit master]",!,"?"
 act
