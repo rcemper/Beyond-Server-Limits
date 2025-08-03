@@ -13,7 +13,7 @@ docker-compose up -d --build
 ```
 ## How to Test it   
 - There is a version in C++ precompiled for docker in subdirectory **/cpp/** rccslave(.cpp)  
-it is foreseen if special privigeges (?root?) are required    
+it is foreseen if special privileges (?root?) are required    
 - The Python variant is not context sensitive and works in Windows and Linux  
 
 First start the Listener  
@@ -45,7 +45,7 @@ cemper9\cemper
 #### Remember:
 the command you submit is executed in a subprocess   
 It is a single shot and you have to providea all required parameters   
-my personal prefence on Windows:
+my personal preference on Windows:
 ````
 ??> :Start https://community.intersystems.com
 ````
@@ -57,4 +57,5 @@ It is different from the Windows environment !
 
 [Article in Spanish](https://es.community.intersystems.com/post/rompe-los-l%C3%ADmites-del-servidor)     
 [Article in DC-EN](https://community.intersystems.com/post/break-limits-your-server)   
+
 
