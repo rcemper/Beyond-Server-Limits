@@ -52,8 +52,9 @@ my personal prefence on Windows:
 #### Special hint for testing cpp slave in Windows
 In Windows you can change into your WSL environmemt.  
 it is the same as Docker is running in.  
-But check your local IP-Address inside WSL using **ifconig**   
+But check your local IP-Address inside WSL using **ifconfig**   
 It is different from the Windows environment !   
 
 [Article in Spanish](https://es.community.intersystems.com/post/rompe-los-l%C3%ADmites-del-servidor)     
 [Article in DC-EN](https://community.intersystems.com/post/break-limits-your-server)   
+
