@@ -24,7 +24,7 @@ Next
 ````
 docker-compose exec iris iris session iris  
 ````
-**[or use WebTerminal](http://localhost:42773/terminal/)**  
+**[or use iTerml](http://localhost:42773/iterm/)**  
 
 From Command Prompt  
 ```` 
@@ -57,5 +57,6 @@ It is different from the Windows environment !
 
 [Article in Spanish](https://es.community.intersystems.com/post/rompe-los-l%C3%ADmites-del-servidor)     
 [Article in DC-EN](https://community.intersystems.com/post/break-limits-your-server)   
+
 
 
